@@ -1,5 +1,8 @@
 import 'dart:io';
+<<<<<<< HEAD
 import 'package:flutter_login/src/models/trending.dart';
+=======
+>>>>>>> origin/main
 import 'package:flutter_login/src/models/userDao.dart';
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
@@ -28,9 +31,12 @@ class DataBaseHelper {
   _crearTablas(Database db, int version) async {
     await db.execute(
         "CREATE TABLE tbl_perfil(id INTEGER PRIMARY KEY, nomUser varchar(25),appUser varchar(25),apmUser varchar(25),telUser varchar(10), emailUser varchar(30),foto varchar(200), username varchar(30), pwduser varchar(20))");
+<<<<<<< HEAD
     //Nueva tabla para favoritos
     await db.execute(
         "CREATE TABLE tbl_favoritos(id INTEGER PRIMARY KEY, idMovie varchar(20), title varchar(100), overview text, backdropPath varchar(50),posterPath varchar(50),popularity double, releaseDate varchar(20), voteAverage double)");
+=======
+>>>>>>> origin/main
   }
 
   Future<int> insertar(Map<String, dynamic> row, String tabla) async {
@@ -49,6 +55,7 @@ class DataBaseHelper {
     return await dbClient.delete(tabla, where: 'id = ?', whereArgs: [id]);
   }
 
+<<<<<<< HEAD
   //obtener los favoritos
   Future<List<MovieFavorite>> getFavorites() async {
     var dbClient = await database;
@@ -66,6 +73,8 @@ class DataBaseHelper {
     return list.length > 0 ? list[0] : null;
   }
 
+=======
+>>>>>>> origin/main
   Future<UserDAO> getUsuario(String mailUser) async {
     var dbClient = await database;
     var result = await dbClient

@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_login/src/screen/dashboard.dart';
+<<<<<<< HEAD
 import 'package:flutter_login/src/screen/detail_movie.dart';
 import 'package:flutter_login/src/screen/favorites.dart';
 import 'package:flutter_login/src/screen/login.dart';
 import 'package:flutter_login/src/screen/profile.dart';
 import 'package:flutter_login/src/screen/splashscreen.dart';
+=======
+import 'package:flutter_login/src/screen/favorites.dart';
+import 'package:flutter_login/src/screen/login.dart';
+import 'package:flutter_login/src/screen/profile.dart';
+>>>>>>> origin/main
 import 'package:flutter_login/src/screen/trending.dart';
 import 'package:flutter_login/src/screen/search.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -36,10 +42,16 @@ class _MyAppState extends State<MyApp> {
         '/search': (BuildContext context) => Search(),
         '/favorites': (BuildContext context) => Favorites(),
         '/profile': (BuildContext context) => Profile(),
+<<<<<<< HEAD
         '/exit': (BuildContext context) => Login(),
         '/detail': (BuildContext context) => DetailMovie()
       },
       home: Splashscreen(),
+=======
+        '/exit': (BuildContext context) => Login()
+      },
+      home: Login(),
+>>>>>>> origin/main
     );
   }
 

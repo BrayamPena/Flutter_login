@@ -1,7 +1,11 @@
 import 'dart:convert';
+<<<<<<< HEAD
 import 'package:flutter_login/src/models/cast.dart';
 import 'package:flutter_login/src/models/trending.dart';
 import 'package:flutter_login/src/models/videoTrailer.dart';
+=======
+import 'package:flutter_login/src/models/trending.dart';
+>>>>>>> origin/main
 import 'package:http/http.dart' show Client;
 
 class ApiMovies {
@@ -15,11 +19,16 @@ class ApiMovies {
       var movies = jsonDecode(response.body)['results'] as List;
       List<Result> listMovies =
           movies.map((movie) => Result.fromJSON(movie)).toList();
+<<<<<<< HEAD
+=======
+      print(movies);
+>>>>>>> origin/main
       return listMovies;
     } else {
       return null;
     }
   }
+<<<<<<< HEAD
 
   //metodo para obtener el cast
   Future<List<CastElement>> getCast(String id) async {
@@ -51,4 +60,6 @@ class ApiMovies {
       return null;
     }
   }
+=======
+>>>>>>> origin/main
 }

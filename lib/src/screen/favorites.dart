@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:flutter_login/src/database/database_helper.dart';
 import 'package:flutter_login/src/models/trending.dart';
 import 'package:flutter_login/src/views/card_favorites.dart';
@@ -47,4 +48,16 @@ class _FavoritesState extends State<Favorites> {
       itemCount: movies.length,
     ));
   }
+=======
+
+class Favorites extends StatelessWidget {
+  const Favorites({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Text('Favorites'),
+    );
+  }
+>>>>>>> origin/main
 }
